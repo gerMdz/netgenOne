@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Barn & Bake: Yum for your Puppers!{% endblock %}</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{{ path('app_homepage')}}">
+                <img src="{{ asset('images/B-B-logo.png') }}" width="30" height="30" alt="bark and bake logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_recipes') }}">All Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">All Skills</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </nav>
+
+        {% block body %}{% endblock %}
+
+        <div class="container mt-5">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-6 d-flex align-items-center">
+                    <p>
+                        Brought to you with <span class="fa-solid fa-heart text-heart"></span> by
+                        <a href="https://netgen.io/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">Netgen</a>
+                        &amp;
+                        <a href="https://symfonycasts.com/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">SymfonyCasts</a>
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

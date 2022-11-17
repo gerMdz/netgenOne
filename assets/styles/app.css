@@ -1,0 +1,100 @@
+@import "@fontsource/lobster";
+@import '~bootstrap';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+body, a {
+    color: #687474;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+.whitespace-top-small {
+    padding-top: 2rem;
+}
+.whitespace-top-medium {
+    padding-top: 4rem;
+}
+.whitespace-top-large {
+    padding-top: 8rem;
+}
+.whitespace-bottom-small {
+    padding-bottom: 2rem;
+}
+.whitespace-bottom-medium {
+    padding-bottom: 4rem;
+}
+.whitespace-bottom-large {
+    padding-bottom: 8rem;
+}
+
+.hero-wrapper {
+    background-color: #E7F3F3;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+.hero-wrapper h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+}
+
+.skill-item-container {
+    background-color: #F8EEE7;
+    border-radius: 5px;
+    box-shadow: 2px 3px 9px 4px rgb(0 0 0 / 4%);
+    height: 185px;
+    display: block;
+    border: 2px solid #F8EEE7;
+    transition: border-color 100ms;
+}
+.skill-item-container:hover {
+    text-decoration: none;
+    color: #687474;
+    border-color: #ffe8d7;
+}
+
+.skill-img {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.recipe-container {
+    border: solid 2px #efefee;
+    border-radius: 5px;
+    box-shadow: 2px 3px 9px 4px rgb(0 0 0 / 4%);
+    background-color: #fff;
+    display: block;
+    transition: border-color 100ms;
+    margin-bottom: 3rem;
+    height: 280px;
+}
+.recipe-container:hover {
+    text-decoration: none;
+    color: #687474;
+    border-color: #ffe8d7;
+}
+
+.recipe-list-item {
+    width: 524px;
+    margin-bottom: 30px;
+}
+.recipe-list-item a {
+    text-decoration: none;
+    color: #687474;
+}
+.text-heart {
+    color: #b30000;
+}
+
+.ad-item-container {
+    border: 2px solid #E7F3F3;
+    width: 300px;
+    border-radius: 5px;
+    display: block;
+}
+.ad-item-container:hover {
+    text-decoration: none;
+    color: #687474;
+}

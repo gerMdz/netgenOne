@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}All Recipes{% endblock %}
+
+{% block body %}
+    <div class="hero-wrapper">
+        <h1>Doggone Good Recipes</h1>
+        <p>Recipes your pup will love!</p>
+    </div>
+
+    <div class="container">
+        <div class="recipe-list-container py-5 px-3 mt-4" style="background-color: #fdedf0; border-radius: 5px;">
+            {% for recipe in pager %}
+                <div class="d-flex justify-content-center">
+                    <div class="text-center recipe-container recipe-list-item p-3">
+                        <a href="{{ path('app_recipes_show', { slug: recipe.slug }) }}">
+                            <div class="p-3 skill-img">
+                                <img src="{{ asset(recipe.imageUrl) }}" width="auto" height="115" alt="{{ recipe.name }} image">
+                            </div>
+                            <h3 class="mt-3">{{ recipe.subText }}</h3>
+                            <small>{{ recipe.timeAsWords }} (prep & cook)</small>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+
+            {% if pager.hasNextPage %}
+                <div class="text-center"><u class="text-center"><a href="{{ path('app_recipes', { page: pager.nextPage }) }}">Load More Recipes</a></u></div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

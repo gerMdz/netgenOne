@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block body %}
+    <div class="hero-wrapper">
+        <h1>Log in!</h1>
+        <p>Tasty treats are inside.</p>
+
+        <div class="mt-4 d-flex justify-content-center">
+            <form method="post" style="min-width: 400px;">
+                {% if error %}
+                    <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                {% endif %}
+
+                <div class="form-row">
+                    <div class="col-auto">
+                        <input type="email" value="{{ last_username }}" name="email" aria-label="Email" class="form-control" autocomplete="email" placeholder="sally@woof.org" required autofocus>
+                    </div>
+                    <div class="col-auto">
+                        <input type="password" name="password" aria-label="Password" class="form-control" autocomplete="current-password" placeholder="password..." required>
+                    </div>
+
+                    <div class="col-auto">
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                        <button class="btn btn-primary" type="submit">
+                            Sign in
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<div class="container">
+
+</div>
+{% endblock %}

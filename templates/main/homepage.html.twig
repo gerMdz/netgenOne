@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="hero-wrapper">
+        <h1 class="header">Bark & Bake</h1>
+        <p class="text-center">Doggone Good Treat & Meal Recipes</p>
+        <div class="d-flex justify-content-center">
+            <img src="{{ asset('images/dog-bone.png') }}" width="auto" height="50" alt="dog bone icon">
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="text-center my-5">Latest Recipes</h2>
+        <div class="row">
+            {% for recipe in latestRecipes %}
+                <div class="col-3">
+                    <a href="{{ path('app_recipes_show', { slug: recipe.slug }) }}" class="text-center recipe-container p-3">
+                        <div class="p-3 entity-img">
+                            <img src="{{ asset(recipe.imageUrl) }}" width="auto" height="115" alt="{{ recipe.name }} image">
+                        </div>
+                        <h3 class="mt-3">{{ recipe.name }}</h3>
+                        <small>{{ recipe.timeAsWords }} (prep & cook)</small>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="text-center mt-5 text-underline"><u><a href="#">Show More</a></u></div>
+    </div>
+
+    <div class="text-center pt-4 pb-5 my-4" style="background-color: #fdedf0;">
+        <h2>Subscribe</h2>
+        <p class="mb-4">Dog Food Cooking Made Easy</p>
+
+        {{ component('subscribe_newsletter') }}
+    </div>
+
+    <div class="container py-4 my-5">
+        <h2 class="text-center mb-4">Featured Skills</h2>
+        <div class="row my-5">
+            <div class="col-3 offset-3">
+                <a href="#" class="text-center skill-item-container p-3">
+                    <h3>Basic Chop</h3>
+                    <div class="p-3 mt-3 skill-img">
+                        <img src="{{ asset('images/pup-cup.png') }}" width="auto" height="80" alt="chop skill image">
+                    </div>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="#" class="text-center skill-item-container p-3">
+                    <h3>Folding in Cheese</h3>
+                    <div class="p-3 mt-3 skill-img">
+                        <img src="{{ asset('images/pup-cup.png') }}" width="auto" height="80" alt="grater skill image">
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-3 text-underline"><u><a href="#">Show More</a></u></div>
+    </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ recipe.name }}{% endblock %}
+
+{% block body %}
+<div class="hero-wrapper">
+    <h1>{{ recipe.name }}</h1>
+    <p>{{ recipe.subText }}</p>
+</div>
+
+<div class="container">
+    <div class="d-flex justify-content-center my-5">
+        <img src="{{asset(recipe.imageUrl)}}" width="auto" height="115" alt="{{ recipe.name }} image">
+    </div>
+
+
+    <h3>INGREDIENTS</h3>
+
+    <ul>
+        {% for ingredient in recipe.ingredients %}
+            <li>{{ ingredient }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3 class="mt-5">INSTRUCTIONS</h3>
+
+    <ol>
+        {% for instruction in recipe.instructions %}
+            <li>{{ instruction }}</li>
+        {% endfor %}
+    </ol>
+
+    <p>recipe from:
+        <u><a href="{{ recipe.sourceUrl }}">{{ recipe.sourceUrl }}</a></u>
+    </p>
+</div>
+{% endblock %}

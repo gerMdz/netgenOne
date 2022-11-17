@@ -1,0 +1,44 @@
+<div{{ attributes }}>
+    {% if isSuccessful %}
+        <div class="d-flex justify-content-center">
+            <span class="fa-solid fa-check text-success"></span>
+            Thanks for signing up {{ firstName }}!
+        </div>
+    {% else %}
+        <form
+            data-action="live#action"
+            data-action-name="prevent|signUp"
+        >
+            <div class="d-flex justify-content-center">
+                <div class="pr-2">
+                    <input
+                        data-model="on(change)|firstName"
+                        type="text"
+                        class="form-control {{ this.getError('firstName') ? 'is-invalid' }}"
+                        placeholder="First name"
+                        aria-label="First name"
+                    >
+                    {% if firstName %}
+                        Well hey {{ firstName }}!
+                    {% endif %}
+                </div>
+                <div class="pr-2">
+                    <input
+                        data-model="email"
+                        class="form-control d-inline {{ this.getError('email') ? 'is-invalid' }}"
+                        type="text"
+                        placeholder="email address"
+                        aria-label="Email address"
+                    >
+                </div>
+                <div class="pr-2">
+                    <button
+                        type="submit"
+                        class="btn btn-secondary"
+                        data-loading="action(signUp)|addAttribute(disabled)"
+                    >Sign Up</button>
+                </div>
+            </div>
+        </form>
+    {% endif %}
+</div>
