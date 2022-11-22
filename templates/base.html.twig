@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Barn & Bake: Yum for your Puppers!{% endblock %}</title>
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Barn & Bake: Yum for your Puppers!{% endblock %}</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon-16x16.png') }}">
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+    {% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
+    {% block javascripts %}
+        {{ encore_entry_script_tags('app') }}
+    {% endblock %}
+</head>
 
-    <body>
+<body>
+{% block layout %}
+    {% block navigation %}
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="{{ path('app_homepage')}}">
+            <a class="navbar-brand" href="{{ path('app_homepage') }}">
                 <img src="{{ asset('images/B-B-logo.png') }}" width="30" height="30" alt="bark and bake logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -43,9 +45,11 @@
                 </form>
             </div>
         </nav>
+    {% endblock %}
 
-        {% block body %}{% endblock %}
+    {% block body %}{% endblock %}
 
+    {% block footer %}
         <div class="container mt-5">
             <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                 <div class="col-md-6 d-flex align-items-center">
@@ -53,10 +57,14 @@
                         Brought to you with <span class="fa-solid fa-heart text-heart"></span> by
                         <a href="https://netgen.io/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">Netgen</a>
                         &amp;
-                        <a href="https://symfonycasts.com/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">SymfonyCasts</a>
+                        <a href="https://symfonycasts.com/"
+                           class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">SymfonyCasts</a>
                     </p>
                 </div>
             </footer>
         </div>
-    </body>
+
+    {% endblock %}
+{% endblock %}
+</body>
 </html>

@@ -36,5 +36,6 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('Recipes', 'fas fa-utensils', Recipe::class);
+        yield MenuItem::linkToUrl('Layouts', 'fa fa-list', $this->generateUrl('nglayouts_admin_layouts_index'));
     }
 }
