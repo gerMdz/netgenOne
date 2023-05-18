@@ -1,2 +1,22 @@
 netgen_layouts:
   pagelayout: 'base.html.twig'
+
+  value_types:
+    doctrine_recipe:
+      name: Recipe
+      manual_items: false
+
+  query_types:
+    latest_recipes:
+      name: Latest Recipes
+
+  view:
+    item_view:
+      #app = admin
+      app:
+        # esta key no es importante
+        recipes_app:
+          template: 'nglayouts/admin/recipe_item.html.twig'
+          match:
+            item\value_type: 'doctrine_recipe'
+
