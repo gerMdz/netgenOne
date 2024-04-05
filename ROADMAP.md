@@ -10,5 +10,5 @@ composer require netgen/layouts-standard
 symfony console doctrine:migrations:migrate --configuration=vendor/netgen/layouts-core/migrations/doctrine.yml
 
 ### Next 
-[Cap 4](https://symfonycasts.com/es/screencast/netgen-layouts/shared-layouts#play)
+[Cap 3](https://symfonycasts.com/es/screencast/netgen-layouts/twig-blocks#play)
 

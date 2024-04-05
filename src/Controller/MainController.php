@@ -12,6 +12,7 @@ class MainController extends AbstractController
     #[Route('/', name: 'app_homepage')]
     public function homepage(RecipeRepository $recipeRepository): Response
     {
+
         $latestRecipes = $recipeRepository->createQueryBuilderOrderedByNewest()
             ->setMaxResults(4)
             ->getQuery()
