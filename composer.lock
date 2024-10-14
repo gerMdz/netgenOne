@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dea2346e2fb43f600739095d05aa715e",
+    "content-hash": "952cc62a12d613f40b8820319360db5a",
     "packages": [
         {
             "name": "babdev/pagerfanta-bundle",
@@ -9227,16 +9227,16 @@
         },
         {
             "name": "symfony/twig-bundle",
-            "version": "v5.4.44",
+            "version": "v5.4.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/twig-bundle.git",
-                "reference": "b94414b3b9e0c523677c0bf31e8975231b55f18a"
+                "reference": "62e3505a62f482a577f55ba08747dc6a3b7463b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/twig-bundle/zipball/b94414b3b9e0c523677c0bf31e8975231b55f18a",
-                "reference": "b94414b3b9e0c523677c0bf31e8975231b55f18a",
+                "url": "https://api.github.com/repos/symfony/twig-bundle/zipball/62e3505a62f482a577f55ba08747dc6a3b7463b3",
+                "reference": "62e3505a62f482a577f55ba08747dc6a3b7463b3",
                 "shasum": ""
             },
             "require": {
@@ -9297,7 +9297,7 @@
             "description": "Provides a tight integration of Twig into the Symfony full-stack framework",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/twig-bundle/tree/v5.4.44"
+                "source": "https://github.com/symfony/twig-bundle/tree/v5.4.31"
             },
             "funding": [
                 {
@@ -9313,7 +9313,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-07T13:25:07+00:00"
+            "time": "2023-10-31T07:58:33+00:00"
         },
         {
             "name": "symfony/uid",
