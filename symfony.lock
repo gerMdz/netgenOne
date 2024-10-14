@@ -101,6 +101,18 @@
     "netgen/layouts-ui": {
         "version": "1.3.2"
     },
+    "php-http/discovery": {
+        "version": "1.20",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "1.18",
+            "ref": "f45b5dd173a27873ab19f5e3180b2f661c21de02"
+        },
+        "files": [
+            "config/packages/http_discovery.yaml"
+        ]
+    },
     "psr/cache": {
         "version": "2.0.0"
     },
@@ -300,6 +312,15 @@
     },
     "symfony/service-contracts": {
         "version": "v2.5.2"
+    },
+    "symfony/stimulus-bundle": {
+        "version": "2.20",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "2.8",
+            "ref": "9e33a8a3794b603fb4be6c04ee5ecab901ce549e"
+        }
     },
     "symfony/string": {
         "version": "v5.4.12"
